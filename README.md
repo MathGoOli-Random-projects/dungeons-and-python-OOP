@@ -1,5 +1,5 @@
 ﻿# dungeons-and-python-OOP
-
+Aprendendo OOP
 Tentativa de fazer um simulador de combate por turnos do D&D. porem desconsiderando:
 - distancia entre perdonagens
 
