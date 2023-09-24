@@ -1,4 +1,8 @@
 
+
+from random_events.dices import D20
+
+
 class Character:
     """ basic class to make all type of class or monster """
     def __init__(self,
@@ -43,10 +47,25 @@ class Character:
 
     def make_inventory(self):
         self.inventory = {
-            "weapom": None,
+            "weapon": None,
             "body": None,
             "shield": None
         }
 
     def attack(self):
-        pass
+        weapon = self.inventory["weapon"]
+
+        mod = weapon.action()
+
+        roll = D20.roll()
+
+        weapon_dices = mod["damage"]
+        damage = 0
+        for dice in weapon_dices:
+            damage += dice.roll()
+        att = {
+            "attack": roll + self.char_modifiers[mod["modifier"]],
+            "damage": damage + self.char_modifiers[mod["modifier"]]
+            }
+        return att
+        
