@@ -12,3 +12,5 @@ Tentativa de fazer um simulador de combate por turnos do D&D. porem desconsidera
 ## falta implementar 
 - defesa/ receber dano
 - simulação de combate
+- classe guerreiro
+- goblin
